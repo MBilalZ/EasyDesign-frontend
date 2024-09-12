@@ -1,0 +1,311 @@
+.authContainer {
+  @media (max-width: 900px) {
+    background-color: #202020;
+  }
+
+  &__left {
+    background-color: #202020;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 50%;
+    max-width: 768px;
+    position: relative;
+    padding-left: 100px;
+    padding-right: 20px;
+    @media (max-width: 1200px) {
+      padding-left: 60px;
+    }
+    @media (max-width: 900px) {
+      width: 100%;
+      max-width: 100%;
+      min-height: auto;
+      padding: 0;
+    }
+
+    &--logo {
+      position: absolute;
+      top: 44px;
+      left: 46px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #f1f1f1;
+    }
+
+    &--content {
+
+      .signUpStepper {
+        margin-top: -150px;
+        @media (max-width: 900px) {
+          min-height: 130px;
+          max-width: 550px;
+          margin: -70px auto 0;
+        }
+        @media (max-width: 600px) {
+          max-width: 350px;
+        }
+
+        @media (max-width: 400px) {
+          max-width: 300px;
+        }
+
+        span {
+          &:not(.Mui-error) {
+            color: var(--text-light-color);
+          }
+        }
+
+        .MuiStepIcon-root {
+          width: 36px;
+          height: 36px;
+          @media (max-width: 900px) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        .MuiStepConnector-vertical {
+          margin-left: 17px;
+          @media (max-width: 900px) {
+            margin-left: 0;
+          }
+
+          .MuiStepConnector-line {
+            min-height: 36px;
+            border-color: #FFFFFF33;
+            border-left-style: dashed;
+            border-left-width: 1.99px;
+            @media (max-width: 900px) {
+              min-height: 24px;
+            }
+          }
+        }
+
+        svg:not(.Mui-active) {
+
+          circle {
+            color: var(--text-light-color);
+          }
+        }
+
+        .MuiStepLabel-root {
+          @media (max-width: 900px) {
+            flex-direction: column;
+            gap: 10px;
+            position: relative;
+          }
+        }
+
+        .MuiStepLabel-label {
+          font-size: 18px;
+          font-weight: 400;
+          @media (max-width: 900px) {
+            font-size: 14px;
+            position: absolute;
+            width: max-content;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          @media (max-width: 600px) {
+            font-size: 12px;
+          }
+
+
+          &.Mui-active {
+            color: $primary;
+            font-weight: 600;
+          }
+        }
+
+        svg.Mui-active {
+          &:not(.Mui-error) {
+            border: 2px solid $primary;
+            border-radius: 50%;
+          }
+
+          circle {
+            color: #E4FCF1;
+          }
+
+        }
+      }
+
+      h1 {
+        font-size: rem(38px);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: var(--text-light-color);
+        max-width: 400px;
+      }
+
+      &-features {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &--item {
+          display: flex;
+          gap: 10px 15px;
+          align-items: center;
+
+          h6 {
+            font-size: rem(16px);
+            font-weight: 500;
+          }
+
+          svg {
+            color: #f1f1f1;
+            font-size: 24px;
+          }
+
+          p {
+            color: var(--text-light-color);
+          }
+        }
+      }
+
+      &-small {
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          font-size: rem(21px);
+          font-weight: 600;
+          margin-bottom: 7px;
+        }
+
+        p {
+          font-size: rem(14px);
+          font-width: 400;
+          color: var(--text-light-color);
+        }
+
+        img {
+          margin-bottom: 22px;
+        }
+      }
+
+      &-bottom {
+        position: absolute;
+        bottom: 50px;
+        left: 40px;
+        max-width: 300px;
+
+        &.full {
+          max-width: 100%;
+        }
+
+        .slick-list {
+          background: #fff;
+          border-radius: 20px;
+          border-bottom-left-radius: 0;
+
+          .slick-list-item {
+            padding: 31px 20px 23px 26px;
+
+            &--author {
+              margin-top: 10px;
+
+            }
+          }
+        }
+
+        @media (max-width: 900px) {
+          bottom: 20px;
+          left: 20px;
+        }
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1;
+    position: relative;
+    padding-left: 150px;
+    padding-right: 10px;
+    background-color: #fff;
+    @media (max-width: 1300px) {
+      padding-left: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      width: 100%;
+      max-width: 100%;
+      min-height: auto;
+      border-top-right-radius: 40px;
+      border-top-left-radius: 40px;
+      padding-inline: 36px;
+      padding-top: 50px;
+      padding-bottom: 20px;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 47px;
+        height: 2px;
+        background-color: rgba(56, 56, 56, 0.2);
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &--content {
+      max-width: 450px;
+      @media (max-width: 900px) {
+        max-width: 350px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      &-top {
+        position: absolute;
+        top: 50px;
+        right: 40px;
+        @media (max-width: 900px) {
+          top: 50px;
+          right: 38px;
+        }
+      }
+
+      h2 {
+        font-size: rem(25px);
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+
+      p {
+        color: #383838CC;
+        max-width: 370px;
+        font-size: rem(14px);
+      }
+
+      form {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: unset !important;
+  margin-bottom: 40px;
+}

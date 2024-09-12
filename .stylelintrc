@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "margin-bottom"
+        ]
+      }
+    ],
+    "declaration-property-value-disallowed-list": null
+  }
+}

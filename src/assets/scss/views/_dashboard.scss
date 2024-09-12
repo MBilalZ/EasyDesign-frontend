@@ -1,0 +1,135 @@
+:root {
+  --dark-site-color: #2F2C2C;
+}
+
+.dashboard {
+  header {
+    //background: #fff;
+    box-shadow: unset;
+    @media screen and (min-width: 900px) {
+      width: calc(100% - 300px);
+
+    }
+  }
+
+  &__drawer {
+    * {
+      color: #fff;
+    }
+
+    &--header {
+      justify-content: flex-start !important;
+
+      &-logo {
+        text-align: center;
+        padding-top: 40px;
+      }
+    }
+
+    &--connection {
+      margin-bottom: 40px;
+
+      &-notConnected {
+        width: 100%;
+        padding: 24px;
+        background: var(--dark-site-color);
+        border-radius: $border-radius;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        //max-width: 230px;
+
+        h6 {
+          margin: 0;
+        }
+
+        p {
+          margin: 0;
+          color: #FFFFFFCC !important;
+          line-height: 1.5;
+          text-align: center;
+        }
+      }
+
+    }
+
+    .MuiListItem-root {
+      border-radius: $border-radius;
+      padding-inline: 15px;
+
+      .MuiListItemIcon-root {
+        min-width: max-content;
+        margin-right: 10px;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+
+      &.has-sub-menu {
+        &.open {
+          background: var(--dark-site-color);
+        }
+      }
+
+      &:hover {
+        background: var(--dark-site-color);
+      }
+
+      //&.MuiCollapse-entered {
+      //  background: pink;
+      //}
+    }
+
+    .MuiCollapse-root {
+      margin-top: 15px;
+
+      .MuiListItem-root {
+
+        padding-left: 40px;
+
+        &:hover {
+          //background: unset !important;
+        }
+      }
+    }
+  }
+
+  //&__toolBar {
+  //  &.mobile-view {
+  //    flex-direction: column;
+  //    align-items: flex-start;
+  //
+  //    > div {
+  //      width: 100%;
+  //
+  //
+  //      &:nth-child(2) {
+  //        justify-content: flex-end;
+  //        display: flex;
+  //      }
+  //    }
+  //  }
+  //}
+
+  .has-pro {
+    border-radius: calc($border-radius / 2);
+
+    span {
+      font-size: 12px !important;
+    }
+
+  }
+
+  .dashboard-radius {
+    height: 100vh;
+    position: relative;
+
+    &::before {
+      content: '';
+    }
+  }
+}
+
